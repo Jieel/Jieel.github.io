@@ -23,9 +23,9 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: var(--dark);
-  background: var(--white);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   line-height: 1.6;
 }
 
