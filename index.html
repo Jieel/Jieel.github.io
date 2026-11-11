@@ -1,142 +1,843 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jieel Store - Jual Beli Akun FF & ML Terpercaya</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>Jieel Store - Jual Beli Akun Free Fire & Mobile Legends Terpercaya</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0b0f19',
+              card: '#131b2e',
+              border: '#1f2d4a',
+              red: '#ff4655',
+              orange: '#ff7300',
+              accent: '#00f0ff'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Orbitron"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">JIEEL<span>STORE</span></div>
-    <ul class="nav-links">
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#layanan">Layanan</a></li>
-      <li><a href="#katalog">Katalog Akun</a></li>
-      <li><a href="#testimoni">Testimoni</a></li>
-    </ul>
-    <a href="https://wa.me/6281234567890?text=Halo%20Jieel%20Store,%20saya%20mau%20transaksi" target="_blank" class="btn-primary">Hubungi Admin</a>
+  <style>
+    /* Custom Styling for Gaming FX */
+    body {
+      background-color: #0b0f19;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    /* Cyber Grid Backdrop */
+    .cyber-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 70, 85, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 70, 85, 0.05) 1px, transparent 1px);
+    }
+
+    /* Ambient Glow Effects */
+    .glow-red {
+      box-shadow: 0 0 30px rgba(255, 70, 85, 0.35);
+    }
+    .glow-orange {
+      box-shadow: 0 0 30px rgba(255, 115, 0, 0.35);
+    }
+    .text-glow {
+      text-shadow: 0 0 15px rgba(255, 70, 85, 0.6);
+    }
+
+    /* Custom Glassmorphism */
+    .glass-card {
+      background: rgba(19, 27, 46, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(255, 70, 85, 0.5);
+      box-shadow: 0 10px 30px -10px rgba(255, 70, 85, 0.3);
+    }
+
+    /* Badge Glow */
+    .badge-ff {
+      background: linear-gradient(135deg, #ff7300, #e63946);
+    }
+    .badge-ml {
+      background: linear-gradient(135deg, #2563eb, #00f0ff);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2d4a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff4655;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-red selection:text-white">
+
+  <!-- TOP BANNER NOTIFICATION -->
+  <div class="bg-gradient-to-r from-brand-red via-brand-orange to-brand-red text-white text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wide">
+    🚀 JIEEL STORE: Layanan Rekber & Jual Beli Akun MLBB & FF Terpercaya 100% Garansi Anti HB!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-red to-brand-orange p-0.5 flex items-center justify-center shadow-lg shadow-brand-red/20 group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center font-display font-black text-brand-red text-xl">
+              J
+            </div>
+          </div>
+          <span class="font-display text-2xl font-black tracking-wider text-white">
+            JIEEL<span class="text-brand-red">STORE</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 font-medium text-slate-300 text-sm">
+          <a href="#home" class="hover:text-brand-red transition-colors">Beranda</a>
+          <a href="#layanan" class="hover:text-brand-red transition-colors">Layanan</a>
+          <a href="#katalog" class="hover:text-brand-red transition-colors">Katalog Akun</a>
+          <a href="#keamanan" class="hover:text-brand-red transition-colors">Garansi & Safety</a>
+          <a href="#testimoni" class="hover:text-brand-red transition-colors">Testimoni</a>
+        </div>
+
+        <!-- Action Button -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20jual%20akun" 
+             target="_blank"
+             class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 border border-brand-border hover:border-brand-red hover:text-white transition-all">
+            Jual Akun
+          </a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20butuh%20bantuan%20transaksi" 
+             target="_blank"
+             class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-red to-brand-orange hover:opacity-90 shadow-lg shadow-brand-red/30 transition-all transform hover:-translate-y-0.5">
+            Hubungi Admin
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-card/95 border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+      <a href="#home" class="block text-slate-300 hover:text-brand-red py-1">Beranda</a>
+      <a href="#layanan" class="block text-slate-300 hover:text-brand-red py-1">Layanan</a>
+      <a href="#katalog" class="block text-slate-300 hover:text-brand-red py-1">Katalog Akun</a>
+      <a href="#keamanan" class="block text-slate-300 hover:text-brand-red py-1">Garansi & Safety</a>
+      <a href="#testimoni" class="block text-slate-300 hover:text-brand-red py-1">Testimoni</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20jual%20akun" target="_blank" class="w-full text-center py-2.5 rounded-xl border border-brand-border text-slate-200 text-sm font-semibold">Jual Akun</a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20butuh%20bantuan" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white text-sm font-bold">Hubungi Admin WA</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <span class="badge">Garansi 100% Aman & Cepat</span>
-      <h1>Jual Beli Akun <span class="highlight">Free Fire</span> & <span class="highlight">Mobile Legends</span></h1>
-      <p>Temukan akun impianmu dengan harga terjangkau, spesifikasi lengkap, dan jaminan keamanan transaksi bersama <strong>Jieel Store</strong>.</p>
-      <div class="hero-btns">
-        <a href="#katalog" class="btn-primary">Lihat Akun Ready</a>
-        <a href="https://wa.me/6281234567890?text=Halo%20Jieel,%20saya%20mau%20jual%20akun" target="_blank" class="btn-secondary">Jual Akun Saya</a>
-      </div>
-    </div>
-  </section>
+  <!-- HERO SECTION -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center cyber-grid py-20 px-4 overflow-hidden">
+    <!-- Ambient Backdrop Light -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-brand-red/20 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-brand-orange/15 blur-[120px] rounded-full pointer-events-none"></div>
 
-  <!-- Layanan / Keunggulan -->
-  <section id="layanan" class="features">
-    <h2 class="section-title">Mengapa Memilih <span>Jieel Store</span>?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="icon">⚡</div>
-        <h3>Proses Kilat</h3>
-        <p>Proses data dan amankan akun dilakukan dengan cepat setelah pembayaran terverifikasi.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🛡️</div>
-        <h3>100% Amanah</h3>
-        <p>Bebas dari risiko hb/hackback. Garansi penuh dan data akun dijamin bersih.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">💰</div>
-        <h3>Harga Terbaik</h3>
-        <p>Penawaran harga yang bersaing, baik untuk pembeli maupun penjual akun.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Katalog Akun -->
-  <section id="katalog" class="katalog">
-    <h2 class="section-title">Katalog Akun <span>Pilihan</span></h2>
-    <div class="katalog-grid">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
       
-      <!-- Card ML 1 -->
-      <div class="card">
-        <div class="card-badge ml">Mobile Legends</div>
-        <div class="card-body">
-          <h3>Sultan MLBB - Rank Mythic</h3>
-          <ul>
-            <li><strong>Skin Total:</strong> 150+ (Collector & Epic)</li>
-            <li><strong>Emblem:</strong> Max Semua</li>
-            <li><strong>Hero:</strong> Unlocked All</li>
-            <li><strong>Login:</strong> Moonton Sepaket (Clean)</li>
-          </ul>
-          <div class="price">Rp 1.200.000</div>
-          <a href="https://wa.me/6281234567890?text=Halo%20Jieel,%20saya%20minat%20Akun%20ML%20Sultan" target="_blank" class="btn-card">Beli Sekarang</a>
-        </div>
+      <!-- Trust Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card/90 border border-brand-red/40 shadow-lg shadow-brand-red/10 mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+        <span class="text-xs md:text-sm font-bold uppercase tracking-wider text-slate-200">
+          #1 Marketplace Akun MLBB & FF Teraman
+        </span>
       </div>
 
-      <!-- Card FF 1 -->
-      <div class="card">
-        <div class="card-badge ff">Free Fire</div>
-        <div class="card-body">
-          <h3>Akun FF Old - Bundle Rare</h3>
-          <ul>
-            <li><strong>Bundle:</strong> Cobra, Criminal Red, HipHop</li>
-            <li><strong>Weapon:</strong> SG2 Rapper, AK 47 Evo</li>
-            <li><strong>Vault:</strong> Rame & Lengkap</li>
-            <li><strong>Login:</strong> FB Bind (Data Polos)</li>
-          </ul>
-          <div class="price">Rp 850.000</div>
-          <a href="https://wa.me/6281234567890?text=Halo%20Jieel,%20saya%20minat%20Akun%20FF%20Old" target="_blank" class="btn-card">Beli Sekarang</a>
-        </div>
+      <!-- Main Headline -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-tight text-white mb-6">
+        Jual Beli Akun <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-brand-red via-brand-orange to-yellow-400 bg-clip-text text-transparent text-glow">
+          Free Fire
+        </span> 
+        & 
+        <span class="bg-gradient-to-r from-blue-400 via-brand-accent to-indigo-400 bg-clip-text text-transparent">
+          Mobile Legends
+        </span>
+      </h1>
+
+      <p class="text-slate-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+        Dapatkan akun game impianmu dengan spesifikasi lengkap, bukti profil & skin jernih, jaminan transaksi 100% aman tanpa batas, serta pemrosesan data akun super cepat!
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="#katalog" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-base uppercase tracking-wider shadow-xl shadow-brand-red/30 hover:scale-105 transition-all">
+          🔥 Lihat Katalog Akun Ready
+        </a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Jieel%20Store,%20saya%20mau%20titip%20jual/jual%20akun%20game" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-card hover:bg-brand-border border border-brand-border text-slate-200 font-bold text-base uppercase tracking-wider transition-all">
+          💼 Jual Akun Kamu Disini
+        </a>
       </div>
 
-      <!-- Card ML 2 -->
-      <div class="card">
-        <div class="card-badge ml">Mobile Legends</div>
-        <div class="card-body">
-          <h3>Akun Smurf High Winrate</h3>
-          <ul>
-            <li><strong>Skin Total:</strong> 45+ Skin Lightborn/Special</li>
-            <li><strong>WR:</strong> 75%+ All Match</li>
-            <li><strong>Hero:</strong> 60 Unlocked</li>
-            <li><strong>Login:</strong> Moonton Unbind All</li>
-          </ul>
-          <div class="price">Rp 450.000</div>
-          <a href="https://wa.me/6281234567890?text=Halo%20Jieel,%20saya%20minat%20Akun%20ML%20Smurf" target="_blank" class="btn-card">Beli Sekarang</a>
+      <!-- Quick Stats Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-brand-border/60">
+        <div class="bg-brand-card/40 p-4 rounded-2xl border border-brand-border/40">
+          <div class="font-display font-black text-2xl md:text-3xl text-brand-red">2,500+</div>
+          <div class="text-xs md:text-sm text-slate-400 font-medium mt-1">Transaksi Sukses</div>
+        </div>
+        <div class="bg-brand-card/40 p-4 rounded-2xl border border-brand-border/40">
+          <div class="font-display font-black text-2xl md:text-3xl text-brand-orange">100%</div>
+          <div class="text-xs md:text-sm text-slate-400 font-medium mt-1">Garansi Anti HB</div>
+        </div>
+        <div class="bg-brand-card/40 p-4 rounded-2xl border border-brand-border/40">
+          <div class="font-display font-black text-2xl md:text-3xl text-brand-accent">5-10 Mins</div>
+          <div class="text-xs md:text-sm text-slate-400 font-medium mt-1">Proses Data Kilat</div>
+        </div>
+        <div class="bg-brand-card/40 p-4 rounded-2xl border border-brand-border/40">
+          <div class="font-display font-black text-2xl md:text-3xl text-emerald-400">24/7</div>
+          <div class="text-xs md:text-sm text-slate-400 font-medium mt-1">Admin Fast Response</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Testimoni / Stat Section -->
-  <section id="testimoni" class="stats-section">
-    <div class="stat-box">
-      <h2>1,500+</h2>
-      <p>Transaksi Sukses</p>
-    </div>
-    <div class="stat-box">
-      <h2>100%</h2>
-      <p>Testimoni Positif</p>
-    </div>
-    <div class="stat-box">
-      <h2>24/7</h2>
-      <p>Dukungan Admin</p>
+  <!-- FEATURES / WHY JIEEL STORE -->
+  <section id="layanan" class="py-20 bg-[#080b13] border-y border-brand-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Keunggulan Layanan</h2>
+        <h3 class="font-display text-3xl sm:text-4xl font-black text-white uppercase">
+          Mengapa Transaksi di <span class="text-brand-red">Jieel Store</span>?
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="glass-card p-8 rounded-3xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red text-2xl mb-6">
+            🛡️
+          </div>
+          <h4 class="font-display text-xl font-bold text-white mb-3">Garansi Amankan Data</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Semua akun diproses pembersihan data (unbound all) secara menyeluruh. Bebas risau dari pembajakan atau pancingan data lama.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-card p-8 rounded-3xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6">
+            📸
+          </div>
+          <h4 class="font-display text-xl font-bold text-white mb-3">Foto SS Akun Transparan</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Tidak ada jebakan deskripsi. Semua bukti item, skin, vault, emblem, winrate, dan status login ditampilkan dalam foto screenshot definisi tinggi.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-card p-8 rounded-3xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-2xl mb-6">
+            ⚡
+          </div>
+          <h4 class="font-display text-xl font-bold text-white mb-3">Pencairan & Handover Cepat</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Bagi penjual, dana langsung ditransfer detik itu juga setelah akun tervalidasi. Bagi pembeli, data langsung diserahterimakan!
+          </p>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <h3>JIEEL STORE</h3>
-      <p>Layanan Rekber & Jual Beli Akun Game Free Fire & Mobile Legends No. 1 Terpercaya.</p>
-      <p class="copyright">&copy; 2026 Jieel Store. All rights reserved.</p>
+  <!-- KATALOG AKUN SHOWCASE -->
+  <section id="katalog" class="py-20 px-4 max-w-7xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Ready Stock Terbaru</h2>
+        <h3 class="font-display text-3xl sm:text-4xl font-black text-white uppercase">
+          Katalog Akun <span class="text-brand-orange">Sultan & Smurf</span>
+        </h3>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 bg-brand-card p-1.5 rounded-2xl border border-brand-border">
+        <button onclick="filterAccounts('all')" id="btn-all" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-brand-red transition-all">
+          Semua Akun
+        </button>
+        <button onclick="filterAccounts('ml')" id="btn-ml" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-all">
+          Mobile Legends
+        </button>
+        <button onclick="filterAccounts('ff')" id="btn-ff" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-all">
+          Free Fire
+        </button>
+      </div>
+    </div>
+
+    <!-- CARDS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- CARD 1: MLBB SULTAN -->
+      <div class="account-card ml glass-card rounded-3xl overflow-hidden flex flex-col group border border-brand-border">
+        <!-- Card Image Header -->
+        <div class="relative h-56 overflow-hidden bg-slate-900">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" 
+               alt="MLBB Account Screenshot" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40"></div>
+          
+          <!-- Badges -->
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="badge-ml text-white text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg">
+              Mobile Legends
+            </span>
+            <span class="bg-amber-500/90 text-black text-[10px] font-bold uppercase px-3 py-1 rounded-full backdrop-blur-md">
+              Mythic Glory
+            </span>
+          </div>
+
+          <button onclick="openModal('Akun MLBB Sultan #ML01', 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop', '185 Skin (Collector, Legend, 3x Prime), All Hero, Winrate Total 68%, Emblem Max, Login Moonton Sepaket Clean.')" 
+                  class="absolute bottom-4 right-4 bg-brand-dark/80 hover:bg-brand-red text-white text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 backdrop-blur-sm transition-all flex items-center gap-1.5">
+            🔍 Zoom Foto SS
+          </button>
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="text-xs font-bold text-brand-accent uppercase tracking-wider mb-1">Kode: #ML01</div>
+          <h4 class="font-display font-bold text-lg text-white mb-3">MLBB Sultan - Collector & Prime Skin</h4>
+          
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 flex-1">
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Total Skin:</strong> 185+ (Collector, Prime, Epic Limited)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Rank Current:</strong> Mythic Immortal 85 Stars
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Status Emblem:</strong> Max Semua Level 60
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Login Data:</strong> Moonton Sepaket (Email Clean Unbind)
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-slate-400 block">Harga Pas</span>
+              <span class="font-display text-xl font-black text-emerald-400">Rp 1.450.000</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20order%20Akun%20MLBB%20Kode%20ML01" 
+               target="_blank"
+               class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-xs uppercase tracking-wider hover:opacity-90 shadow-md transition-all">
+              Beli Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: FF OLD COBRA -->
+      <div class="account-card ff glass-card rounded-3xl overflow-hidden flex flex-col group border border-brand-border">
+        <!-- Card Image Header -->
+        <div class="relative h-56 overflow-hidden bg-slate-900">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop" 
+               alt="Free Fire Account Screenshot" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40"></div>
+          
+          <!-- Badges -->
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="badge-ff text-white text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg">
+              Free Fire
+            </span>
+            <span class="bg-red-600 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full backdrop-blur-md">
+              Bundle Old
+            </span>
+          </div>
+
+          <button onclick="openModal('Akun Free Fire Old Cobra #FF01', 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop', 'Bundle Cobra Rage, SG2 Rapper, AK Evo Level Max, MP40 Cobra, Vault Old Rame, Login Facebook Polos.')" 
+                  class="absolute bottom-4 right-4 bg-brand-dark/80 hover:bg-brand-red text-white text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 backdrop-blur-sm transition-all flex items-center gap-1.5">
+            🔍 Zoom Foto SS
+          </button>
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="text-xs font-bold text-brand-orange uppercase tracking-wider mb-1">Kode: #FF01</div>
+          <h4 class="font-display font-bold text-lg text-white mb-3">Free Fire Old - Cobra & SG2 Rapper</h4>
+          
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 flex-1">
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Vault Rare:</strong> Cobra Rage, Hip Hop, Criminal Red
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Weapon Evo:</strong> AK Drake Lv Max, MP40 Lv 6
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Senjata Utama:</strong> SG2 Rapper & SG2 Incubator
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Login Data:</strong> FB Bind (Data Siap Ganti/Polos)
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-slate-400 block">Harga Pas</span>
+              <span class="font-display text-xl font-black text-emerald-400">Rp 980.000</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20order%20Akun%20FF%20Kode%20FF01" 
+               target="_blank"
+               class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-xs uppercase tracking-wider hover:opacity-90 shadow-md transition-all">
+              Beli Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: MLBB SMURF HIGH WR -->
+      <div class="account-card ml glass-card rounded-3xl overflow-hidden flex flex-col group border border-brand-border">
+        <!-- Card Image Header -->
+        <div class="relative h-56 overflow-hidden bg-slate-900">
+          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop" 
+               alt="MLBB Smurf Account Screenshot" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40"></div>
+          
+          <!-- Badges -->
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="badge-ml text-white text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg">
+              Mobile Legends
+            </span>
+            <span class="bg-indigo-600 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full backdrop-blur-md">
+              WR 78%+
+            </span>
+          </div>
+
+          <button onclick="openModal('Akun MLBB Smurf High WR #ML02', 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1200&auto=format&fit=crop', 'Smurf High Winrate 78.5%, Hero 65, Skin 52 (Lightborn, Venom, SABER), Clean Unbind Moonton.')" 
+                  class="absolute bottom-4 right-4 bg-brand-dark/80 hover:bg-brand-red text-white text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 backdrop-blur-sm transition-all flex items-center gap-1.5">
+            🔍 Zoom Foto SS
+          </button>
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="text-xs font-bold text-brand-accent uppercase tracking-wider mb-1">Kode: #ML02</div>
+          <h4 class="font-display font-bold text-lg text-white mb-3">MLBB Smurf GG - High Win Rate</h4>
+          
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 flex-1">
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Win Rate All Match:</strong> 78.5% (Mantap Buat GB)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Total Skin:</strong> 52 Skin (Lightborn & Special)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Jumlah Hero:</strong> 65 Hero Unlocked
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-accent">✦</span> <strong>Login Data:</strong> Moonton All Unbind (All Clean)
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-slate-400 block">Harga Pas</span>
+              <span class="font-display text-xl font-black text-emerald-400">Rp 550.000</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20order%20Akun%20MLBB%20Kode%20ML02" 
+               target="_blank"
+               class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-xs uppercase tracking-wider hover:opacity-90 shadow-md transition-all">
+              Beli Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: FF SULTAN EVO -->
+      <div class="account-card ff glass-card rounded-3xl overflow-hidden flex flex-col group border border-brand-border">
+        <!-- Card Image Header -->
+        <div class="relative h-56 overflow-hidden bg-slate-900">
+          <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=800&auto=format&fit=crop" 
+               alt="Free Fire Evo Gun Screenshot" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-black/40"></div>
+          
+          <!-- Badges -->
+          <div class="absolute top-4 left-4 flex gap-2">
+            <span class="badge-ff text-white text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg">
+              Free Fire
+            </span>
+            <span class="bg-yellow-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full backdrop-blur-md">
+              7 Evo Gun
+            </span>
+          </div>
+
+          <button onclick="openModal('Akun FF Sultan Full Evo Gun #FF02', 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1200&auto=format&fit=crop', '7 Evo Gun Level Max (AK, Scar, MP40, SG2, M1014), Bundle Season 1, Magic Cube 5, VK Clean.')" 
+                  class="absolute bottom-4 right-4 bg-brand-dark/80 hover:bg-brand-red text-white text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 backdrop-blur-sm transition-all flex items-center gap-1.5">
+            🔍 Zoom Foto SS
+          </button>
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 flex-1 flex flex-col">
+          <div class="text-xs font-bold text-brand-orange uppercase tracking-wider mb-1">Kode: #FF02</div>
+          <h4 class="font-display font-bold text-lg text-white mb-3">FF Sultan - Full Evo Gun Max</h4>
+          
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 flex-1">
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Evo Gun:</strong> 7 Weapon Full Max Level
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Bundle Iconic:</strong> Season 1 Elite Pass & Criminal
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Emote Sultan:</strong> 40+ Emote Unlocked
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-brand-orange">✦</span> <strong>Login Data:</strong> VK Clean (Free Re-bind)
+            </li>
+          </ul>
+
+          <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-slate-400 block">Harga Pas</span>
+              <span class="font-display text-xl font-black text-emerald-400">Rp 1.850.000</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20mau%20order%20Akun%20FF%20Kode%20FF02" 
+               target="_blank"
+               class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-xs uppercase tracking-wider hover:opacity-90 shadow-md transition-all">
+              Beli Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WORKFLOW / ALUR TRANSAKSI -->
+  <section class="py-20 bg-brand-card/40 border-t border-brand-border/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Prosedur Aman</h2>
+        <h3 class="font-display text-3xl sm:text-4xl font-black text-white uppercase">
+          Alur Transaksi Mudah di <span class="text-brand-red">Jieel Store</span>
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-brand-dark p-6 rounded-2xl border border-brand-border relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red font-display font-black text-lg flex items-center justify-center mb-4">
+            01
+          </div>
+          <h4 class="font-bold text-white mb-2">Pilih Akun</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pilih akun impianmu di katalog, cek detail spesifikasi dan zoom foto screenshot.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-brand-dark p-6 rounded-2xl border border-brand-border relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange font-display font-black text-lg flex items-center justify-center mb-4">
+            02
+          </div>
+          <h4 class="font-bold text-white mb-2">Hubungi Admin WA</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Klik "Beli Sekarang" untuk terhubung otomatis ke WhatsApp resmi Jieel Store dengan kode akun.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-brand-dark p-6 rounded-2xl border border-brand-border relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-accent/20 text-brand-accent font-display font-black text-lg flex items-center justify-center mb-4">
+            03
+          </div>
+          <h4 class="font-bold text-white mb-2">Pembayaran & Amankan</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Lakukan pembayaran via QRIS/Bank/E-Wallet. Admin memandu proses pengamanan data akun.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-brand-dark p-6 rounded-2xl border border-brand-border relative">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 font-display font-black text-lg flex items-center justify-center mb-4">
+            04
+          </div>
+          <h4 class="font-bold text-white mb-2">Selesai & Garansi</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Akun sepenuhnya milikmu! Didukung garansi anti hackback dari Jieel Store.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONI SECTION -->
+  <section id="testimoni" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-xs font-bold text-brand-red uppercase tracking-widest mb-2">Real Feedback</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-white uppercase">
+        Kata Mereka Tentang <span class="text-brand-red">Jieel Store</span>
+      </h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="glass-card p-6 rounded-2xl border border-brand-border">
+        <div class="flex items-center gap-1 text-amber-400 mb-4">
+          ★★★★★
+        </div>
+        <p class="text-xs text-slate-300 italic mb-6">
+          "Proses gercep banget min, cuma 5 menit data Moonton langsung beres di unbind semua. Akun MLBB SULTAN ML01 mendarat mulus!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-red/20 text-brand-red font-bold flex items-center justify-center text-sm">
+            R
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Rian Pratama</div>
+            <div class="text-[10px] text-slate-400">Buyer MLBB Sultan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="glass-card p-6 rounded-2xl border border-brand-border">
+        <div class="flex items-center gap-1 text-amber-400 mb-4">
+          ★★★★★
+        </div>
+        <p class="text-xs text-slate-300 italic mb-6">
+          "Awalnya ragu beli akun FF online, tapi transaksi di Jieel Store diajarin amankan akun ampe tuntas. Recommended rekber/jual beli!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-orange/20 text-brand-orange font-bold flex items-center justify-center text-sm">
+            A
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Andi Wijaya</div>
+            <div class="text-[10px] text-slate-400">Buyer Free Fire</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="glass-card p-6 rounded-2xl border border-brand-border">
+        <div class="flex items-center gap-1 text-amber-400 mb-4">
+          ★★★★★
+        </div>
+        <p class="text-xs text-slate-300 italic mb-6">
+          "Jual akun ML smurf disini cairnya hitungan menit setelah data terverifikasi. Admin ramah fast respon!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-accent/20 text-brand-accent font-bold flex items-center justify-center text-sm">
+            B
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Bagas Putra</div>
+            <div class="text-[10px] text-slate-400">Seller MLBB</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark border-t border-brand-border/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div class="md:col-span-2">
+          <a href="#" class="inline-block font-display text-2xl font-black text-white mb-4">
+            JIEEL<span class="text-brand-red">STORE</span>
+          </a>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm mb-6">
+            Pusat jual beli & jasa perantara (rekber) akun game Free Fire dan Mobile Legends amanah, berpengalaman, serta bergaransi resmi di Indonesia.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://wa.me/6281234567890" target="_blank" class="w-9 h-9 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-slate-300 hover:text-brand-red transition-all">
+              💬
+            </a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-slate-300 hover:text-brand-red transition-all">
+              📸
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#home" class="hover:text-brand-red transition-colors">Beranda</a></li>
+            <li><a href="#layanan" class="hover:text-brand-red transition-colors">Layanan Kami</a></li>
+            <li><a href="#katalog" class="hover:text-brand-red transition-colors">Katalog Ready</a></li>
+            <li><a href="#testimoni" class="hover:text-brand-red transition-colors">Testimoni Transaksi</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Payment Method Badges -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Metode Pembayaran</h4>
+          <p class="text-xs text-slate-400 mb-3">Mendukung semua transaksi lokal:</p>
+          <div class="flex flex-wrap gap-2 text-[10px] font-bold text-slate-300">
+            <span class="px-3 py-1.5 rounded-lg bg-brand-card border border-brand-border">QRIS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-brand-card border border-brand-border">DANA</span>
+            <span class="px-3 py-1.5 rounded-lg bg-brand-card border border-brand-border">OVO</span>
+            <span class="px-3 py-1.5 rounded-lg bg-brand-card border border-brand-border">GOPAY</span>
+            <span class="px-3 py-1.5 rounded-lg bg-brand-card border border-brand-border">BCA / MANDIRI</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-brand-border/40 text-center text-xs text-slate-500">
+        &copy; 2026 <strong>Jieel Store</strong>. All rights reserved. Website dirancang responsif untuk GitHub Pages.
+      </div>
     </div>
   </footer>
+
+  <!-- MODAL PREVIEW SS AKUN -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all">
+    <div class="bg-brand-card border border-brand-border rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 border-b border-brand-border flex items-center justify-between">
+        <div>
+          <h3 id="modal-title" class="font-display font-bold text-lg text-white">Detail Screenshot Akun</h3>
+          <p id="modal-desc" class="text-xs text-slate-400 mt-1">Spesifikasi data lengkap akun</p>
+        </div>
+        <button onclick="closeModal()" class="w-9 h-9 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-slate-300 hover:text-brand-red text-lg">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body (Image Container) -->
+      <div class="p-4 overflow-y-auto flex-1 flex items-center justify-center bg-black/60">
+        <img id="modal-img" src="" alt="Screenshot Akun Zoom" class="max-h-[60vh] object-contain rounded-xl border border-brand-border">
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="text-xs text-slate-400">Hubungi admin untuk rekaman video lengkap akun.</span>
+        <a id="modal-wa-btn" href="#" target="_blank" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-brand-orange text-white font-bold text-xs uppercase tracking-wider text-center">
+          Order Akun Ini
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Account Filter Functionality
+    function filterAccounts(category) {
+      const cards = document.querySelectorAll('.account-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button styling
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-brand-red', 'text-white');
+        btn.classList.add('text-slate-400');
+      });
+
+      const activeBtn = document.getElementById(`btn-${category}`);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-brand-red', 'text-white');
+        activeBtn.classList.remove('text-slate-400');
+      }
+
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else if (card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Zoom Preview Functionality
+    function openModal(title, imgSrc, details) {
+      const modal = document.getElementById('image-modal');
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('modal-desc').innerText = details;
+
+      const waBtn = document.getElementById('modal-wa-btn');
+      waBtn.href = `https://wa.me/6281234567890?text=Halo%20Admin%20Jieel%20Store,%20saya%20tertarik%20dengan%20${encodeURIComponent(title)}`;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('image-modal');
+      modal.classList.add('hidden');
+    }
+
+    // Close modal on background click
+    document.getElementById('image-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
